@@ -1,2 +1,2 @@
 # wp-plugin-boilerplate
-WordPress plugin boilerplate starter
+WordPress plugin boilerplate
