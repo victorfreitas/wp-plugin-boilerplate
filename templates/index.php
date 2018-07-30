@@ -1,0 +1,2 @@
+<?php
+// Silence if golden

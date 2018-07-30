@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Boilerplate">
+	<description>Boilerplate Coding Standard</description>
+
+	<arg name="colors"/>
+	<arg value="sp"/>
+	<arg name="extensions" value="php"/>
+
+	<autoload>vendor/autoload.php</autoload>
+
+	<exclude-pattern>assets/</exclude-pattern>
+	<exclude-pattern>i18n/</exclude-pattern>
+	<exclude-pattern>logs/</exclude-pattern>
+	<exclude-pattern>node_modules/</exclude-pattern>
+	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>webpack/</exclude-pattern>
+	<exclude-pattern>*/**/index.php</exclude-pattern>
+
+	<rule ref="WordPress-Docs"/>
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName"/>
+
+		<exclude name="WordPress.VIP.DirectDatabaseQuery.DirectQuery"/>
+
+		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="Squiz.Commenting.VariableComment.Missing"/>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="string" value="boilerplate"/>
+		</properties>
+	</rule>
+</ruleset>
