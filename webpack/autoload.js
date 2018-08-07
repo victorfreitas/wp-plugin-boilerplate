@@ -2,9 +2,8 @@ const fs = require('fs')
 const path = require('path')
 
 class Autoload {
-  constructor(root, prod) {
-    this.root = root
-    this.prod = prod
+  constructor(root) {
+    this.root = path.join(root)
     this.noIndex = this.noIndex.bind(this)
     this.parse = this.parse.bind(this)
 
@@ -12,14 +11,9 @@ class Autoload {
   }
 
   init() {
-    this.setRoot()
     this.setFiles()
     this.filterFiles()
     this.processFiles()
-  }
-
-  setRoot() {
-    this.root = path.join(this.root)
   }
 
   setFiles() {
@@ -39,8 +33,7 @@ class Autoload {
   }
 
   parse(file) {
-    const fileData = require(`${this.root}/${file}`)
-    return fileData(this.prod)
+    return require(`${this.root}/${file}`)
   }
 
   toArray() {
@@ -48,8 +41,6 @@ class Autoload {
   }
 }
 
-module.exports = (root, prod) => {
-  const autoload = new Autoload(root, prod)
-
-  return autoload.toArray()
-}
+module.exports = root => (
+  (new Autoload(root)).toArray()
+)

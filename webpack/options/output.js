@@ -1,8 +1,8 @@
 const { dist } = require('../paths')
 
-module.exports = () => ({
+module.exports = {
   output: {
     path: dist,
     filename: '[name].bundle.js'
   }
-})
+}

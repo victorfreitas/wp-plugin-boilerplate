@@ -1,6 +1,6 @@
 const { script, style } = require('../paths')
 
-module.exports = () => ({
+module.exports = {
   entry: {
     front: [
       `${script('front')}/index.js`,
@@ -10,5 +10,5 @@ module.exports = () => ({
       `${script('admin')}/index.js`,
       `${style('admin')}/style.scss`
     ]
+  }
 }
-})

@@ -1,3 +1,5 @@
-module.exports = prod => ({
-  mode: prod ? 'production' : 'development'
-})
+const isDev = require('../is-dev')
+
+module.exports = {
+  mode: isDev ? 'development' : 'production'
+}

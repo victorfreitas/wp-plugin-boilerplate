@@ -1,5 +1,5 @@
-module.exports = prod => {
-  const list = require('../autoload')(__dirname, prod)
+module.exports = () => {
+  const list = require('../autoload')(__dirname)
   let options = {}
 
   list.forEach(opt => {

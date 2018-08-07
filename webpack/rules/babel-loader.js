@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports = {
   test: /\.jsx?$/,
   exclude: /node_modules/,
   use: {
@@ -11,4 +11,4 @@ module.exports = () => ({
       ]
     }
   }
-})
+}

@@ -1,7 +1,9 @@
 const globImporter = require('node-sass-glob-importer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-module.exports = prod => ({
+const isDev = require('../is-dev')
+
+module.exports = {
   test: /\.s?css$/,
   use: [
     {
@@ -9,14 +11,16 @@ module.exports = prod => ({
     },
     {
       loader: 'css-loader',
-      options: { sourceMap: !prod }
+      options: {
+        sourceMap: isDev
+      }
     },
     {
       loader: 'sass-loader',
       options: {
-        sourceMap: !prod,
+        sourceMap: isDev,
         importer: globImporter()
       }
     }
   ]
-})
+}

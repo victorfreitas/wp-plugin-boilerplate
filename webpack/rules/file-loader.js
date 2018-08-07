@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports = {
   test: /\.(png|gif|jpe?g|svg|woff2?|ttf|eot)$/,
   rules: [
     {
@@ -11,4 +11,4 @@ module.exports = () => ({
       }
     }
   ]
-})
+}

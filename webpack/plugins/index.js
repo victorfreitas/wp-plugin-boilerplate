@@ -1,3 +1,3 @@
-module.exports = prod => (
-  require('../autoload')(__dirname, prod)
+module.exports = (
+  require('../autoload')(__dirname)
 )

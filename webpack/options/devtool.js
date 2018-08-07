@@ -1,3 +1,5 @@
-module.exports = prod => ({
-  devtool: prod ? false : 'eval'
-})
+const isDev = require('../is-dev')
+
+module.exports = {
+  devtool: isDev ? 'source-map' : false
+}

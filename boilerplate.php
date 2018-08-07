@@ -13,7 +13,7 @@
  * Plugin Name: Boilerplate
  * Plugin URI:  https://github.com/victorfreitas
  * Description: Boilerplate with webpack
- * Version:     0.1.0
+ * Version:     0.2.0
  * Author:      Victor Freitas
  * Author URI:  https://github.com/victorfreitas
  * License:     GPL-3.0+

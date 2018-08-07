@@ -1,11 +1,11 @@
 const { scss, assets } = require('../paths')
 
-module.exports = () => ({
+module.exports = {
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.scss', '.css'],
+    extensions: ['.js', '.jsx', '.css', '.scss', '.json'],
     alias: {
       '~': scss,
       assets
     }
   }
-})
+}
