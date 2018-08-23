@@ -27,6 +27,6 @@ class Export {
 			wp_kses_allowed_html( 'post' )
 		);
 
-		exit( 1 );
+		exit( 0 );
 	}
 }
