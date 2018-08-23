@@ -1,5 +1,5 @@
 const isDev = require('../is-dev')
 
 module.exports = {
-  devtool: isDev ? 'source-map' : false
+  devtool: isDev ? 'source-map' : false,
 }

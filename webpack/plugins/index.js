@@ -1,3 +1,3 @@
-module.exports = (
-  require('../autoload')(__dirname)
-)
+const autoload = require('../autoload')
+
+module.exports = autoload(__dirname)

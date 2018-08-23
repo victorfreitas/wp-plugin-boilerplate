@@ -5,7 +5,7 @@
  *
  * @package Boilerplate\Config\Scripts
  * @author  Victor Freitas
- * @since   0.1.0
+ * @since   0.1.1
  * @link    https://github.com/victorfreitas
  */
 
@@ -102,7 +102,7 @@ class Scripts {
 	}
 
 	protected function get_path( $ext ) {
-		return sprintf( 'assets/dist/%s.bundle.%s', $this->type, $ext );
+		return sprintf( 'dist/%s.bundle.%s', $this->type, $ext );
 	}
 
 	public static function instance() {

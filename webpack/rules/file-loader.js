@@ -5,10 +5,8 @@ module.exports = {
       loader: 'file-loader',
       options: {
         name: '[path][name].[ext]',
-        outputPath: file => (
-          file.replace('assets', '..')
-        )
-      }
-    }
-  ]
+        outputPath: file => file.replace('assets', '..'),
+      },
+    },
+  ],
 }

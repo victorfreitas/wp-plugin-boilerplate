@@ -1,5 +1,3 @@
-const isDev = require('../is-dev')
-
 module.exports = {
-  mode: isDev ? 'development' : 'production'
+  mode: process.env.NODE_ENV,
 }

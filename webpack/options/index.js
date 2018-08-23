@@ -1,9 +1,11 @@
+const autoload = require('../autoload')
+
 module.exports = () => {
-  const list = require('../autoload')(__dirname)
+  const list = autoload(__dirname)
   let options = {}
 
-  list.forEach(opt => {
-    options = Object.assign({}, options, opt)
+  list.forEach((opt) => {
+    options = Object.assign(options, opt)
   })
 
   return options

@@ -7,15 +7,15 @@ module.exports = {
   rootPath,
   assets,
   css: `${assets}/css`,
-  dist: `${assets}/dist`,
+  dist: `${rootPath}/dist`,
   fonts: `${assets}/fonts`,
   images: `${assets}/images`,
   js: `${assets}/js`,
   scss: `${assets}/scss`,
   style(name) {
-    return `${assets}/scss/${name}`
+    return `${assets}/scss/${name}/style.scss`
   },
   script(name) {
-    return `${assets}/js/${name}/src`
-  }
+    return `${assets}/js/${name}/src/index.js`
+  },
 }

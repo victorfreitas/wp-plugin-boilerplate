@@ -2,9 +2,24 @@
   "extends": ["airbnb"],
   "parser": "babel-eslint",
   "env": {
-    "browser": true
+    "browser": true,
+    "jquery": true
   },
   "rules": {
-    "semi": [2, "never"]
+    "semi": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
+    "import/no-unresolved": {
+      "alias": true
+    },
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }]
+  },
+  "globals": {
+		"wp": true
   }
 }

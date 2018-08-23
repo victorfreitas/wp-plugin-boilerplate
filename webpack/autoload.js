@@ -41,6 +41,4 @@ class Autoload {
   }
 }
 
-module.exports = root => (
-  (new Autoload(root)).toArray()
-)
+module.exports = root => new Autoload(root).toArray()

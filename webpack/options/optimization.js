@@ -6,9 +6,9 @@ module.exports = {
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
-        parallel: true
+        parallel: true,
       }),
-      new OptimizeCssAssetsPlugin({})
-    ]
-  }
+      new OptimizeCssAssetsPlugin({}),
+    ],
+  },
 }

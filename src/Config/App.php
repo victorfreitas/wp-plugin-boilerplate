@@ -23,7 +23,7 @@ class App extends Loader {
 
 	public $namespace = 'Boilerplate';
 
-	const VERSION = '0.2.0';
+	const VERSION = '0.2.1';
 
 	const SLUG = 'boilerplate';
 
